@@ -1,7 +1,13 @@
 # composite-run-steps-action-template
 
 This template can be used to quickly start a new custom composite-run-steps action repository.  Click the `Use this template` button at the top to get started.
-
+- [Inputs](#inputs)
+- [Outputs](#outputs)
+- [Example](#example)
+- [Incrementing the Version](#incrementing-the-version)
+- [Code of Conduct](#code-of-conduct)
+- [License](#license)
+  
 ## TODOs
 - Readme
   - [ ] Update the Inputs section with the correct action inputs
@@ -44,13 +50,12 @@ This template can be used to quickly start a new custom composite-run-steps acti
 ## Inputs
 | Parameter | Is Required | Description           |
 | --------- | ----------- | --------------------- |
-| `input-1` | true        | Description goes here |
-| `input-2` | false       | Description goes here |
+| `input`   | true        | Description goes here |
 
 ## Outputs
-| Output     | Description           |
-| ---------- | --------------------- |
-| `output-1` | Description goes here |
+| Output   | Description           |
+| -------- | --------------------- |
+| `output` | Description goes here |
 
 ## Example
 
@@ -58,17 +63,26 @@ This template can be used to quickly start a new custom composite-run-steps acti
 # TODO: Fill in the correct usage
 jobs:
   job1:
-    runs-on: [self-hosted]
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
 
-      - name: Add the action here
-        uses: im-open/this-repo@v1.0.0
+      - name: ''
+        uses: im-open/thisrepo@v1.0.0 # TODO: fix the action name
         with:
-          input-1: 'abc'
-          input-2: '123
+          input-1: ''
 ```
 
+## Incrementing the Version
+
+This action uses [git-version-lite] to examine commit messages to determine whether to perform a major, minor or patch increment on merge.  The following table provides the fragment that should be included in a commit message to active different increment strategies.
+| Increment Type | Commit Message Fragment                     |
+| -------------- | ------------------------------------------- |
+| major          | +semver:breaking                            |
+| major          | +semver:major                               |
+| minor          | +semver:feature                             |
+| minor          | +semver:minor                               |
+| patch          | *default increment type, no comment needed* |
 
 ## Code of Conduct
 
@@ -77,3 +91,5 @@ This project has adopted the [im-open's Code of Conduct](https://github.com/im-o
 ## License
 
 Copyright &copy; 2021, Extend Health, LLC. Code released under the [MIT license](LICENSE).
+
+[git-version-lite]: https://github.com/im-open/git-version-lite
