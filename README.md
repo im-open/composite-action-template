@@ -4,6 +4,7 @@ This template can be used to quickly start a new custom composite-run-steps acti
 - [Inputs](#inputs)
 - [Outputs](#outputs)
 - [Example](#example)
+- [Incrementing the Version](#incrementing-the-version)
 - [Code of Conduct](#code-of-conduct)
 - [License](#license)
   
