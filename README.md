@@ -4,7 +4,8 @@ This template can be used to quickly start a new custom composite-run-steps acti
 - [Inputs](#inputs)
 - [Outputs](#outputs)
 - [Example](#example)
-- [Incrementing the Version](#incrementing-the-version)
+- [Contributing](#contributing)
+  - [Incrementing the Version](#incrementing-the-version)
 - [Code of Conduct](#code-of-conduct)
 - [License](#license)
   
@@ -73,7 +74,14 @@ jobs:
           input-1: ''
 ```
 
-## Incrementing the Version
+## Contributing
+
+When creating new PRs please ensure:
+1. For major or minor changes, at least one of the commit messages contains the appropriate `+semver:` keywords listed under [Incrementing the Version](#incrementing-the-version).
+2. The `README.md` example has been updated with the new version.  See [Incrementing the Version](#incrementing-the-version).
+3. The action code does not contain sensitive information.
+
+### Incrementing the Version
 
 This action uses [git-version-lite] to examine commit messages to determine whether to perform a major, minor or patch increment on merge.  The following table provides the fragment that should be included in a commit message to active different increment strategies.
 | Increment Type | Commit Message Fragment                     |
