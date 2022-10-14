@@ -13,10 +13,11 @@ This template can be used to quickly start a new custom composite-run-steps acti
 - [License](#license)
   
 ## TODOs
-- Readme
+
+- README.md
   - [ ] Update the Inputs section with the correct action inputs
   - [ ] Update the Outputs section with the correct action outputs
-  - [ ] Update the Example section with the correct usage   
+  - [ ] Update the Example section with the correct usage
 - action.yml
   - [ ] Fill in the correct name, description, inputs and outputs and implement steps
 - CODEOWNERS
@@ -48,15 +49,16 @@ This template can be used to quickly start a new custom composite-run-steps acti
     | pagerduty       | For actions related to PagerDuty         |
     | test            | For actions related to testing           |
     | tf              | For actions related to Terraform         |
-  - [ ] Add any additional topics for an action if they apply    
-    
+  - [ ] Add any additional topics for an action if they apply  
 
 ## Inputs
+
 | Parameter | Is Required | Description           |
 | --------- | ----------- | --------------------- |
 | `input`   | true        | Description goes here |
 
 ## Outputs
+
 | Output   | Description           |
 | -------- | --------------------- |
 | `output` | Description goes here |
@@ -69,7 +71,7 @@ jobs:
   job1:
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: ''
         uses: im-open/thisrepo@v1.0.0 # TODO: fix the action name
@@ -80,6 +82,7 @@ jobs:
 ## Contributing
 
 When creating new PRs please ensure:
+
 1. For major or minor changes, at least one of the commit messages contains the appropriate `+semver:` keywords listed under [Incrementing the Version](#incrementing-the-version).
 2. The `README.md` example has been updated with the new version.  See [Incrementing the Version](#incrementing-the-version).
 3. The action code does not contain sensitive information.
