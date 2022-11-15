@@ -50,6 +50,7 @@ This template can be used to quickly start a new custom composite-run-steps acti
     | test            | For actions related to testing           |
     | tf              | For actions related to Terraform         |
   - [ ] Add any additional topics for an action if they apply  
+- Address any remaining TODOs
 
 ## Inputs
 
@@ -88,7 +89,7 @@ When creating new PRs please ensure:
 
 When a pull request is created and there are changes to code-specific files and folders, the `auto-update-readme` workflow will run.  The workflow will update the action-examples in the README.md if they have not been updated manually by the PR author. The following files and folders contain action code and will trigger the automatic updates:
 
-- action.yml
+- action.yml  # TODO:  Add any additional files/folders if they are included in the action
 
 There may be some instances where the bot does not have permission to push changes back to the branch though so this step should be done manually for those branches. See [Incrementing the Version](#incrementing-the-version) for more details.
 
