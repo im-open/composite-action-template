@@ -29,7 +29,10 @@ This template can be used to quickly start a new custom composite-run-steps acti
     - [ ] Check *Require pull request reviews before merging*
     - [ ] Check *Dismiss stale pull request approvals when new commits are pushed*
     - [ ] Check *Require review from Code Owners*
-    - [ ] Check *Include Administrators*
+    - [ ] Check *Require status checks to pass before merging*
+    - [ ] Check *Require branches to be up to date before merging*
+    - [ ] Add `update-readme` to the list of required status checks.  This will need to be done after the first `auto-update-readme` workflow runs.
+    - [ ] Check *Do not allow bypassing the above settings*
   - [ ] On the *Manage Access* tab add the appropriate groups
 - About Section (accessed on the main page of the repo, click the gear icon to edit)
   - [ ] The repo should have a short description of what it is for
