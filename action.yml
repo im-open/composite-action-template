@@ -19,4 +19,4 @@ runs:
       id: step_1
       shell: bash
       run: |
-        echo "::set-output name=hello::world"
+        echo "hello=world" >> $GITHUB_OUTPUT
