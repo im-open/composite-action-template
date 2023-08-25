@@ -9,6 +9,7 @@ This template can be used to quickly start a new custom composite-run-steps acti
 - [Example](#example)
 - [Contributing](#contributing)
   - [Incrementing the Version](#incrementing-the-version)
+  - [Updating the README.md](#updating-the-readmemd)
 - [Code of Conduct](#code-of-conduct)
 - [License](#license)
   
@@ -85,29 +86,36 @@ jobs:
 
 ## Contributing
 
-When creating new PRs please ensure:
+When creating new PRs from a fork please review the following items:
+| PR Contribution Requirements/Tasks                                                                                                                    | Required<br/>for Branches | Required<br/>for Forks |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------:|:----------------------:|
+| The action code does not contain sensitive information.                                                                                               |            Yes            |          Yes           |
+| For major or minor changes, at least one of the commit messages contains the appropriate `+semver:` keywords listed under [Incrementing the Version]. |            Yes            |          Yes           |
+| The README.md action versions have been updated.  See [Updating the README.md] for details.                                                           |            No*            |          Yes           |
 
-1. For major or minor changes, at least one of the commit messages contains the appropriate `+semver:` keywords listed under [Incrementing the Version](#incrementing-the-version).
-1. The action code does not contain sensitive information.
-
-When a pull request is created and there are changes to code-specific files and folders, the `auto-update-readme` workflow will run.  The workflow will update the action-examples in the README.md if they have not been updated manually by the PR author. The following files and folders contain action code and will trigger the automatic updates:
-
-- action.yml  # TODO:  Add any additional files/folders if they are included in the action
-
-There may be some instances where the bot does not have permission to push changes back to the branch though so this step should be done manually for those branches. See [Incrementing the Version](#incrementing-the-version) for more details.
+\* When a pull request is created from a branch, the build workflow will automatically update the README.md with the next version and push a commit to the branch if those changes have not already been made.
 
 ### Incrementing the Version
 
-The `auto-update-readme` and PR merge workflows will use the strategies below to determine what the next version will be.  If the `auto-update-readme` workflow was not able to automatically update the README.md action-examples with the next version, the README.md should be updated manually as part of the PR using that calculated version.
+This repo uses [git-version-lite] in its build and PR merge workflows to examine commit messages to determine whether to perform a major, minor or patch increment on merge.  The following table provides the fragment that should be included in a commit message to active different increment strategies.
 
-This action uses [git-version-lite] to examine commit messages to determine whether to perform a major, minor or patch increment on merge.  The following table provides the fragment that should be included in a commit message to active different increment strategies.
 | Increment Type | Commit Message Fragment                     |
-| -------------- | ------------------------------------------- |
+|----------------|---------------------------------------------|
 | major          | +semver:breaking                            |
 | major          | +semver:major                               |
 | minor          | +semver:feature                             |
 | minor          | +semver:minor                               |
 | patch          | *default increment type, no comment needed* |
+
+If a contributor is unsure what the next version will be, create a PR and the first build workflow that runs will calculate the value.
+
+### Updating the README.md
+
+If changes are made to the action's source code, the README.md file should be updated to reflect the next version of the action.  Each instance of the action in the examples should be updated.  This helps users know what the latest tag is without having to navigate to the Tags page of the repository.
+
+This step does not need to be completed if only ancillary files like the README.md have been changed.
+
+If a pull request is made from a branch, this step will be automatically performed by the build workflow unless the PR author has already done so.  Pull requests made from forked repositories will need to perform this step manually.  See [Incrementing the Version] for details on how to determine what the next version will be.
 
 ## Code of Conduct
 
@@ -115,6 +123,8 @@ This project has adopted the [im-open's Code of Conduct](https://github.com/im-o
 
 ## License
 
-Copyright &copy; 2022, Extend Health, LLC. Code released under the [MIT license](LICENSE).
+Copyright &copy; 2023, Extend Health, LLC. Code released under the [MIT license](LICENSE).
 
 [git-version-lite]: https://github.com/im-open/git-version-lite
+[Incrementing the Version]: #incrementing-the-version
+[Updating the README.md]: #updating-the-readmemd
