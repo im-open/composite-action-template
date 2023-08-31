@@ -50,13 +50,13 @@ jobs:
       # should be included like action.yml or package.json.  Do not include files like README.md or .gitignore.
       # Files do not need to be explicitly provided here if they fall under one of the dirs in dirs-with-code.
       # ** This value must match the same files-with-code argument specified in increment-version-on-merge.yml.
-      files-with-code: 'action.yml,package.json,package-lock.json' # TODO:  Update if there are additional files or scripts.  
+      files-with-code: 'action.yml' # TODO:  Update if there are additional files or scripts.
 
       # The directories that contain source code for the action.  Only dirs with files that affect the action's
       # execution should be included like src or dist.  Do not include dirs like .github or node_modules.
       # ** This value must match the same dirs-with-code argument specified in increment-version-on-merge.yml.
-      dirs-with-code: 'src,dist' # TODO:  Update if there are additional directories with code for the action.  
+      dirs-with-code: '' # TODO:  Update if there are additional directories with code for the action.
 
       # The npm script to run to build the action.  This is typically 'npm run build' if the
       # action needs to be compiled.  For composite-run-steps actions this is typically empty.
-      build-command: 'npm run build' # TODO:  Update if a different command is used to build/recompile/format the action
+      build-command: '' # TODO:  Update if this action has a build step.
