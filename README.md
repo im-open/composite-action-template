@@ -2,19 +2,20 @@
 
 This template can be used to quickly start a new custom composite-run-steps action repository.  Click the `Use this template` button at the top to get started.
 
-## Index
+## Index <!-- omit in toc -->
 
-- [Inputs](#inputs)
-- [Outputs](#outputs)
-- [Example](#example)
-- [Contributing](#contributing)
-  - [Incrementing the Version](#incrementing-the-version)
-  - [Source Code Changes](#source-code-changes)
-  - [Updating the README.md](#updating-the-readmemd)
-- [Code of Conduct](#code-of-conduct)
-- [License](#license)
+- [composite-run-steps-action-template](#composite-run-steps-action-template)
+  - [Inputs](#inputs)
+  - [Outputs](#outputs)
+  - [Usage Examples](#usage-examples)
+  - [Contributing](#contributing)
+    - [Incrementing the Version](#incrementing-the-version)
+    - [Source Code Changes](#source-code-changes)
+    - [Updating the README.md](#updating-the-readmemd)
+  - [Code of Conduct](#code-of-conduct)
+  - [License](#license)
   
-## TODOs
+## TODOs <!-- omit in toc -->
 
 - README.md
   - [ ] Update the Inputs section with the correct action inputs
@@ -40,7 +41,7 @@ This template can be used to quickly start a new custom composite-run-steps acti
   - [ ] The repo should have a short description of what it is for
   - [ ] Add one of the following topic tags:
     | Topic Tag       | Usage                                    |
-    | --------------- | ---------------------------------------- |
+    |-----------------|------------------------------------------|
     | az              | For actions related to Azure             |
     | code            | For actions related to building code     |
     | certs           | For actions related to certificates      |
@@ -60,16 +61,16 @@ This template can be used to quickly start a new custom composite-run-steps acti
 ## Inputs
 
 | Parameter | Is Required | Description           |
-| --------- | ----------- | --------------------- |
+|-----------|-------------|-----------------------|
 | `input`   | true        | Description goes here |
 
 ## Outputs
 
 | Output   | Description           |
-| -------- | --------------------- |
+|----------|-----------------------|
 | `output` | Description goes here |
 
-## Example
+## Usage Examples
 
 ```yml
 # TODO: Fill in the correct usage
@@ -125,10 +126,11 @@ This project has adopted the [im-open's Code of Conduct](https://github.com/im-o
 
 Copyright &copy; 2023, Extend Health, LLC. Code released under the [MIT license](LICENSE).
 
-[git-version-lite]: https://github.com/im-open/git-version-lite
+<!-- Links -->
 [Incrementing the Version]: #incrementing-the-version
+[source code]: #source-code-changes
 [Updating the README.md]: #updating-the-readmemd
+[usage examples]: #usage-examples
 [build-and-review-pr]: ./.github/workflows/build-and-review-pr.yml
 [increment-version-on-merge]: ./.github/workflows/increment-version-on-merge.yml
-[source code]: #source-code-changes
-[usage examples]: #usage-examples
+[git-version-lite]: https://github.com/im-open/git-version-lite
